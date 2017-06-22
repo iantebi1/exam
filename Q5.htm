@@ -33,14 +33,16 @@
     </style>
     <script>
         function add() {
-            var t=document.getElementById("to")
+            var f = form1.from.value;
+            var t = form1.to.value;
             var i;
             var sum = 0;
-            var resultsum=document.getElementById("result")
-            for (i = 0; i < 6; i++) {
-                sum = sum + i
+            var resultsum = document.getElementById("result")
+            for (i = f; f < t; i++) {
+                sum = sum + f
             }
-            resultsum.innerHTML=sum;
+            resultsum.innerHTML = sum;
+            return false;
         }
     </script>
 </head>

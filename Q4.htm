@@ -35,28 +35,27 @@
 	</style>
 
 	<script type="text/javascript">
-		function display() {
-			var i = document.getElementById("pic");
+		function display(paraID) {
+			var i = document.getElementById("pic1");
 			var c = document.getElementById("celtics");
 			var p = document.getElementById("patriots");
 
-			if (c) {
+			if (paraID=="celtics") {
 				i.src = "celtics.png";
 			}
-			else if (p) {
+			else if (paraID=="patriots") {
 				i.src = "patriots.jpg";
 			}
 		}
 
-		function border() {
-			alert("test");
-			var i = document.getElementById("pic");
+		function add() {
+			var i = document.getElementById("pic1");
 			i.style.borderColor = "red";
 			i.style.borderStyle = "ridge";
 			i.style.borderWidth = "10px";
 		}
-		function noborder() {
-			var i = document.getElementById("pic");
+		function no() {
+			var i = document.getElementById("pic1");
 			i.style.border = "";
 		}
 	</script>
@@ -76,12 +75,12 @@
 	</p>
 	<hr>
 	<p>
-		<img onmouseover="border()" onmouseout="noborder()" id="pic" src="" alt="" title="This is the image" width="100" height="100"
+		<img onmouseover="add()" onmouseout="no()" id="pic1" src="" alt="" title="This is the image" width="100" height="100"
 		/>
 	</p>
 	<p>
-		<input id="celtics" onclick="display()" type="button" value="Celtics" />
-		<input id="patriots" onclick="display()" type="button" value="Patriots" />
+		<input id="celtics" onclick="display(this.id)" type="button" value="Celtics" />
+		<input id="patriots" onclick="display(this.id)" type="button" value="Patriots" />
 	</p>
 
 
