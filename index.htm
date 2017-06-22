@@ -1,25 +1,130 @@
 ﻿<!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Exam - Index.htm</title>
-        <style type="text/css">
-            h1 {
-                font-family: Arial;
-                font-weight: bold;
-                text-align: center;
-            }
-        </style>
+<head>
+    <meta charset="UTF-8">
+    <title>Exam - Index.htm</title>
+    <style type="text/css">
+        h1 {
+            font-family: Arial;
+            font-weight: bold;
+            text-align: center;
+        }
 
-    </head>
+        ol#father {
+            list-style-type: lower-roman;
+            margin-left: 200px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
 
-    <body>
-        <!-- Your HTML goes here -->
-        <h1> Summer 2017 Exam - Index Page</h1>
+        ul#child {
+            list-style-type: square;
+        }
 
-    </body>
+        div#list {
+            background-color: silver;
+            color: olive;
+            font-family: cursive;
+            font-size: 1.5em;
+            font-style: italic;
+            margin-right: 250px;
+            margin-left: 250px;
+        }
+    </style>
+    <script>
+        function backround1() {
+            var a = document.getElementById("e1");
+            var b = document.getElementById("e2")
+            var c = document.getElementById("e3")
+            var d = document.getElementById("e4")
+            var e = document.getElementById("e5")
+            var f = document.getElementById("e6")
+            a.style.backgroundColor = "orange";
 
-    <!-- If you see this comment, please delete me :-) -->
+
+        }
+        function backroundreverse1() {
+            var a = document.getElementById("e1");
+            a.style.backgroundColor = "";
+        }
+
+
+        function backround2() {
+            var c = document.getElementById("e2");
+            c.style.backgroundColor = "orange";
+        }
+        function backroundreverse2() {
+            var c = document.getElementById("e2");
+            c.style.backgroundColor = "";
+        }
+
+        function backround3() {
+            var f = document.getElementById("e3");
+            f.style.backgroundColor = "orange";
+        }
+        function backroundreverse3() {
+            var f = document.getElementById("e3");
+            f.style.backgroundColor = "";
+        }
+        function backround4() {
+            var h = document.getElementById("e4");
+            h.style.backgroundColor = "orange";
+        }
+        function backroundreverse4() {
+            var h = document.getElementById("e4");
+            h.style.backgroundColor = "";
+        }
+        function backround5() {
+            var j = document.getElementById("e5");
+            j.style.backgroundColor = "orange";
+        }
+        function backroundreverse5() {
+            var j = document.getElementById("e5");
+            j.style.backgroundColor = "";
+        }
+        function backround6() {
+            var l = document.getElementById("e6");
+            l.style.backgroundColor = "orange";
+        }
+        function backroundreverse6() {
+            var l = document.getElementById("e6");
+            l.style.backgroundColor = "";
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Your HTML goes here -->
+    <h1> Summer 2017 Exam - Index Page</h1>
+    <div id="list">
+        <ol id="father">
+            <li><a onmouseover="backround1()" onmouseout="backroundreverse1()" href="index.html" id="e1">Question 2</a></li>
+            <ul id="child">
+                <li><a onmouseover="backround2()" onmouseout=" backroundreverse2()" id="e2" href="Q2.htm#retina.htm">Retina Display</a>
+                </li>
+                <li><a onmouseover="backround3()" onmouseout="backroundreverse3()" id="e3" href="Q2.htm#criticism.htm">Criticism</a>
+                </li>
+            </ul>
+            <li>
+                <a onmouseover="backround4()" onmouseout="backroundreverse4()" id="e4" href="Q3.htm" class="">Question 3</a>
+
+            </li>
+
+            <li>
+                <a onmouseover="backround5()" onmouseout="backroundreverse5()" id="e5" href="Q4.htm" class="">Question 4</a>
+
+            </li>
+            <li>
+                <a onmouseover="backround6()" onmouseout="backroundreverse6()" id="e6" href="Q5.htm" class="">Question 5</a>
+
+
+            </li>
+        </ol>
+    </div>
+</body>
+
+<!-- If you see this comment, please delete me :-) -->
 
 </html>

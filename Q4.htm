@@ -2,66 +2,90 @@
 
 <html>
 
-	<head>
-		<title>Web Tech Exam - Q4</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<style type="text/css">
-			input {
-				width: 200px;
-				height: 50px;
+<head>
+	<title>Web Tech Exam - Q4</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+		input {
+			width: 200px;
+			height: 50px;
+		}
+
+		h1 {
+			text-align: center;
+			font-family: Arial;
+			font-weight: bold;
+		}
+
+		p {
+			text-align: center
+		}
+
+		p#instruction {
+			font-family: arial;
+			font-size: 16pt;
+			color: navy;
+			padding: 10px 100px 10px 100px;
+			text-align: left;
+		}
+
+		img {
+			border: 3px dotted black;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function display() {
+			var i = document.getElementById("pic");
+			var c = document.getElementById("celtics");
+			var p = document.getElementById("patriots");
+
+			if (c) {
+				i.src = "celtics.png";
 			}
-
-			h1 {
-				text-align: center;
-				font-family: Arial;
-				font-weight: bold;
+			else if (p) {
+				i.src = "patriots.jpg";
 			}
+		}
 
-			p {
-				text-align: center
-			}
+		function border() {
+			alert("test");
+			var i = document.getElementById("pic");
+			i.style.borderColor = "red";
+			i.style.borderStyle = "ridge";
+			i.style.borderWidth = "10px";
+		}
+		function noborder() {
+			var i = document.getElementById("pic");
+			i.style.border = "";
+		}
+	</script>
 
-			p#instruction {
-				font-family: arial;
-				font-size: 16pt;
-				color: navy;
-				padding: 10px 100px 10px 100px;
-				text-align: left;
-			}
+</head>
 
-			img {
-				border: 3px dotted black;
-			}
-		</style>
+<body>
 
-		<script type="text/javascript">
+	<h1>Web Tech Exam - Question 4</h1>
+	<p id="instruction">
+		This question has two parts: (a) Add appropriate functionality to the two buttons below such that when the first button is
+		clicked, the Celtics image is shown and when the second is clicked,the Patriots image is shown (5 points if written as
+		two separate functions, 10 if written as a single function). (b) When the mouse is moved over the image (note that only
+		one image is shown at a time), add a red, ridge border that is 10px thick. When the mouse is removed, the border should
+		disappear (10 points).
 
-		</script>
-
-	</head>
-
-	<body>
-
-		<h1>Web Tech Exam - Question 4</h1>
-		<p id="instruction">
-			This question has two parts: (a) Add appropriate functionality to the two buttons below such that when the first button is
-			clicked, the Celtics image is shown and when the second is clicked,the Patriots image is shown (5 points if written as
-			two separate functions, 10 if written as a single function). (b) When the mouse is moved over the image (note that only
-			one image is shown at a time), add a red, ridge border that is 10px thick. When the mouse is removed, the border should
-			disappear (10 points).
-
-		</p>
-		<hr>
-		<p>
-			<img src="" alt="" title="This is the image" width="100" height="100" />
-		</p>
-		<p >
-			<input type="button" value="Celtics" />
-			<input type="button" value="Patriots" />
-		</p>
+	</p>
+	<hr>
+	<p>
+		<img onmouseover="border()" onmouseout="noborder()" id="pic" src="" alt="" title="This is the image" width="100" height="100"
+		/>
+	</p>
+	<p>
+		<input id="celtics" onclick="display()" type="button" value="Celtics" />
+		<input id="patriots" onclick="display()" type="button" value="Patriots" />
+	</p>
 
 
-	</body>
-	<!-- Not that bad, isn't it?-->
+</body>
+<!-- Not that bad, isn't it?-->
 
 </html>
